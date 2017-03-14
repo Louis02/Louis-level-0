@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class SoundtrackToLife {
 
 	public static void main(String[] args) {
-for(int i=0; i<20; i++){
+for(int i=0; i<8; i++){
 		// 1. Adjust this pop-up to find out what mood the user is in.
 		int ElonComp = JOptionPane.showOptionDialog(null, "What is your favorite Elon Musk company", "Company Question",
 				0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Tesla", "SpaceX", "PayPal" }, null);
