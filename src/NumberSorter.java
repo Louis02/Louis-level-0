@@ -5,24 +5,40 @@ public class NumberSorter {
 		String o = JOptionPane.showInputDialog("Choose a number");
 		String to = JOptionPane.showInputDialog("Choose a number again");
 		String tee = JOptionPane.showInputDialog("Choose a number one more time");
-		int hi = Integer.parseInt(o);
-		int hii = Integer.parseInt(to);
-		int hiii = Integer.parseInt(tee);
-		if (hi > hii && hi > hiii) {
-			JOptionPane.showMessageDialog(null, hi);
-			if (hii > hiii) {
-				JOptionPane.showMessageDialog(null, hii);
-				JOptionPane.showMessageDialog(null, hiii);
-			} else if (hii > hiii&&hi>hi) {
-				JOptionPane.showMessageDialog(null, hii);
-				if (hi > hiii) {
-					JOptionPane.showMessageDialog(null, hi);
-					JOptionPane.showMessageDialog(null, hiii);
-				}
+		int one = Integer.parseInt(o);
+		int two = Integer.parseInt(to);
+		int three = Integer.parseInt(tee);
+		if (one < two && one < three) {
+			JOptionPane.showMessageDialog(null, one);
+			if (two < three) {
+				JOptionPane.showMessageDialog(null, two);
+				JOptionPane.showMessageDialog(null, three);
+			} else if (three < two) {
+				JOptionPane.showMessageDialog(null, three);
+				JOptionPane.showMessageDialog(null, two);
 			}
 
-		} else if (hii > hiii && hii > hi) {
+		} else if (two < three && two < one) {
+			JOptionPane.showMessageDialog(null, two);
+			if (one > three) {
+				JOptionPane.showMessageDialog(null, three);
+				JOptionPane.showMessageDialog(null, one);
+			} else {
+				JOptionPane.showMessageDialog(null, one);
+				JOptionPane.showMessageDialog(null, three);
+			}
 
+		}
+
+		else {
+			JOptionPane.showMessageDialog(null, three);
+			if (one < two) {
+				JOptionPane.showMessageDialog(null, one);
+				JOptionPane.showMessageDialog(null, two);
+			} else {
+				JOptionPane.showMessageDialog(null, two);
+				JOptionPane.showMessageDialog(null, one);
+			}
 		}
 	}
 }
